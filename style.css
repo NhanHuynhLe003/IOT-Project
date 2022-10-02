@@ -201,8 +201,13 @@ h1{
 }
 
 @media screen and (max-width: 320px) {
-    #left .search-bar > input {
+    #left .search-bar{
         width: 80%;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    #left .search-bar > input {
+        width: 100%;
     }
     #section-container{
         padding: 0;
