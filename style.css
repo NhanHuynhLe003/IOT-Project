@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#section-container{
+    padding: 75px 40px;
+    /* height: 100vh; */
+    background-image: linear-gradient(to bottom right, rgb(196, 220, 243) , rgb(91, 168, 241));
+    display: flex;
+    flex-direction: row;
+}
+#section-container #left{
+    height: 80vh;
+    
+    width: 50%;
+    background-image: linear-gradient(to bottom right, rgb(50, 183, 240), rgb(168, 221, 248));
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+
+}
+#left .left-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#section-container #left h2{
+    
+}
+#section-container #left .item-container{
+    
+}
+#left .search-bar{
+    position: relative;
+    left: -22px;
+}
+#left .search-bar > input{
+    border: none;
+    padding: 5px 20px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+#left .search-bar > button{
+    position: absolute;
+    border: none;
+    padding: 5px 15px;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: rgb(244, 208, 6);
+    color: #000;
+}
+#left .search-bar > button:hover{
+    cursor: pointer;
+    color: rgb(198, 105, 59);
+    background-color: rgb(234, 213, 97);
+}
+#left .item-container .location{
+    padding: 15px 0
+}
+#left .item-container .description{
+    text-align: center;
+}
+#left .item-container .description .hour{
+    color: #fff;
+}
+#left .item-container .description .date{
+    color: #fff;
+}
+#left .status{
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+}
+#left .status .img-container img{
+    width: 120px;
+}
+#left .status .status-name{
+
+}
+#section-container #right{
+    
+    height: 80vh;
+    width: 50%;
+    background: linear-gradient(to bottom, rgb(35, 75, 138), rgb(119, 123, 124));
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#section-container #right h1{
+    padding-top: 60px;
+}
+i.fa-solid.fa-wind {
+    color: green;
+    font-size: 25px;
+    width: 30px;
+}
+i.fa-sharp.fa-solid.fa-droplet {
+    color: blue;
+    width: 30px;
+    font-size: 25px;
+}
+i.fa-solid.fa-temperature-three-quarters {
+    color: red;
+    width: 30px;
+    font-size: 30px;
+}
+span.name-of-para {
+    color: #fff;
+}
+span.digit {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #fff;
+}
+.parameter {
+    padding: 0 35px;
+}
+.right__container{
+    padding: 50px 0;
+}
+.right__container .row{
+    margin: 10px 10px;
+    position: relative;
+    padding-bottom: 30px;
+    
+}
+.right__container .row .col_01{
+    background-image: linear-gradient(to right, green, yellow);
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+}
+.right__container .row .col_02{
+    background-image: linear-gradient(to right, yellow, orange);
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+    
+}
+.right__container .row .col_03{
+    background-image: linear-gradient(to right, orange, red);
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+}
+.right__container .row .col_04{
+    background-image: linear-gradient(to right, red, rgb(179, 10, 10));
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+}
+h1{
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+.right__container .row .area{
+    color: azure;
+    font-size: 700;
+    padding-bottom: 10px;
+}
+.arrow-selection{
+    position: absolute;
+    top: 52px;
+    transform: rotate(180deg);
+    /* display: flex;
+    justify-content: flex-end; */
+    right: 95%;
+}
+.arrow-selection>i{
+    font-size: 28px;
+    color: rgb(19, 2, 94);
+}
+@media screen and (max-width:992px) {
+    #section-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    #section-container #left{
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 0;
+    }
+    #section-container #right{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 30px;
+    }
+}
