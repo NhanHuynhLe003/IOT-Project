@@ -59,7 +59,8 @@
     background-color: rgb(234, 213, 97);
 }
 #left .item-container .location{
-    padding: 15px 0
+    padding: 15px 0;
+    text-align: center;
 }
 #left .item-container .description{
     text-align: center;
