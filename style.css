@@ -187,9 +187,55 @@ h1{
     #section-container #left{
         border-top-right-radius: 30px;
         border-bottom-left-radius: 0;
+        width: 100%;
     }
     #section-container #right{
         border-top-right-radius: 0;
         border-bottom-left-radius: 30px;
+        width: 100%;
+    }
+    .arrow-selection{
+        right: 91%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #left .search-bar > input {
+        width: 80%;
+    }
+    #section-container{
+        padding: 0;
+    }
+    #section-container #left{
+        width: 100%;
+        height: 100vh;
+        border-top-left-radius: 0;
+    }
+    #left .search-bar{
+        left: 0;
+    }
+    #section-container #right {
+        width: 100%;
+        height: 90vh;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .right__container{
+        padding: 0;
+    }
+    .arrow-selection{
+        right: 83%;
+    }
+    .height-col{
+        max-height: 30px;
+    }
+    .right__container .row {
+        margin: 5px;
+    }
+    span.digit{
+        font-size: 17px;
+    }
+    span.name-of-para {
+        font-size: 15px;
     }
 }
