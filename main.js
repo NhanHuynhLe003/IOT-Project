@@ -4,7 +4,8 @@ let weather = {
         fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${this.apiKey}`
         )
-        .then((rep) => rep.json()).then((data) => this.weatherRendering(data));
+        .then((res) => res.json())
+        .then((data) => this.weatherRendering(data))
     },
     weatherRendering: function(data) {
         const {name} = data;
@@ -43,17 +44,26 @@ let weather = {
     searching: function(){
         this.weatherFetching(document.querySelector('.search-bar input').value);
     },
-    loading: setInterval(() => {
-        weather.weatherFetching(`${document.querySelector('.search-bar input').value}`);
-    }, 1000),
+    defaultPst: 'Ho Chi Minh City',
 }
 
     document.querySelector('.search-btn').addEventListener("click", ()=>{
         weather.searching();
     });
 
-    
+    function changeDfPst(){
+        let newVal = document.querySelector('.search-bar input').value;
+        newVal === ''? newVal = weather.defaultPst : newVal;
+        return newVal
+    }
 
 //auto update data
+
+weather.weatherFetching(changeDfPst());
+
+const loading =  setInterval(() => {
+    weather.weatherFetching(changeDfPst());
+    
+}, 1000);
 
 
