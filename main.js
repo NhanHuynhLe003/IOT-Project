@@ -46,11 +46,30 @@ let weather = {
     },
     defaultPst: 'Ho Chi Minh City',
 }
-
+    function hideContent(){
+        document.querySelector(".hidden-element").setAttribute("style","display: none !important;"); //hide
+        document.querySelector(".lds-dual-ring").setAttribute("style", "display: block;"); //show loading
+    }
+    function showContent(){
+        document.querySelector(".hidden-element").setAttribute("style","display: block;");
+        document.querySelector(".lds-dual-ring").setAttribute("style", "display: none;");
+    }
+    //xu li btn
     document.querySelector('.search-btn').addEventListener("click", ()=>{
         weather.searching();
+        showContent();
     });
-
+    //an noi dung khi dang nhap
+    document.querySelector('.search-bar input').addEventListener("keydown", ()=>{
+        hideContent();
+    })
+    //dang nhap blur ra ngoai se hien lai
+    document.querySelector('.search-bar input').addEventListener("blur",() => {
+        showContent();
+    })
+    document.querySelector('.search-bar input').addEventListener("keydown", (e) => {
+        e.key === 'Enter' ? showContent(): hideContent();
+    })
     function changeDfPst(){
         let newVal = document.querySelector('.search-bar input').value;
         newVal === ''? newVal = weather.defaultPst : newVal;
@@ -58,7 +77,7 @@ let weather = {
     }
 
 //auto update data
-
+    
 weather.weatherFetching(changeDfPst());
 
 const loading =  setInterval(() => {

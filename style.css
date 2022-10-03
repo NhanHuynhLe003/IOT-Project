@@ -181,6 +181,38 @@ h1{
     font-size: 28px;
     color: rgb(19, 2, 94);
 }
+.hidden-element{
+    /* display: none; */
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    display: none;
+  }
+  .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+    position: relative;
+    top: 15vh;
+    right: 40%;
+  }
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 @media screen and (max-width:992px) {
     #section-container{
         flex-direction: column;
